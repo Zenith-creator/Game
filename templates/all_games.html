@@ -1,0 +1,111 @@
+{%extends 'layout.html'%}
+
+{% block head %}
+<title>All Games</title>
+{% endblock %}
+
+{% block body%}
+<section class="text-gray-600 body-font relative z-0">
+    <section id="allgames">
+        <form method="post" class="flex items-center  mx-72 py-12">   
+            <label for="simple-search" class="sr-only">Search</label>
+            <div class="relative w-full">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                </div>
+                <input type="text" id="simple-search" name="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" required>
+            </div>
+            <button type="submit" class="p-2.5 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <span class="sr-only">Search</span>
+            </button>
+        </form>
+  <div class="container px-5 py-0 mx-auto">
+  <br>
+  <p class="lg:w-2/3 font-medium text-3xl text-white">Our available games</p><br>
+  <div class="flex flex-wrap -m-4 content" >
+  <div class="lg:w-1/3 sm:w-1/2 p-4"><a href="game1">
+    <div class="flex relative">
+      <img alt="gallery" class="rounded-lg absolute inset-0 w-full h-full object-center object-cover" src="https://i.ytimg.com/vi/YWIC7eXM_3I/hqdefault.jpg">
+      <div class="rounded-lg px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100" style="z-index: 3;">
+        <h2 class="tracking-widest text-lg title-font font-large text-indigo-500 mb-1">Game 1</h2><br>
+        <h1 class="title-font text-xl font-medium text-gray-900 mb-3">Money Movers</h1><br><br>
+      </div>
+    </div></a>
+  </div>
+  <div class="lg:w-1/3 sm:w-1/2 p-4"><a href="game2">
+    <div class="flex relative">
+      <img alt="gallery" class="rounded-lg absolute inset-0 w-full h-full object-cover object-center" src="https://images.squarespace-cdn.com/content/v1/598b1d4ef9a61e39d195e6e1/1619110505057-TUOED8CKWMJCG0TWQW3P/SmashKarts001.png?format=1000w">
+      <div class="rounded-lg px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+        <h2 class="tracking-widest text-lg title-font font-large text-indigo-500 mb-1">Game 2</h2><br>
+        <h1 class="title-font text-xl font-medium text-gray-900 mb-3">Smash Karts</h1><br><br>
+      </div>
+    </div></a>
+  </div>
+  <div class="lg:w-1/3 sm:w-1/2 p-4"><a href="game3">
+    <div class="flex relative">
+      <img alt="gallery" class="rounded-lg absolute inset-0 w-full h-full object-cover object-center" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy1ZqLxqL8YdKplj6bmY25M6WBUB-okv_g2Q&usqp=CAU">
+      <div class="rounded-lg px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+        <h2 class="tracking-widest text-lg title-font font-large text-indigo-500 mb-1">Game 3</h2><br>
+        <h1 class="title-font text-xl font-medium text-gray-900 mb-3">Bullet Master</h1><br><br>
+      </div>
+    </div></a>
+  </div>
+  <div class="lg:w-1/3 sm:w-1/2 p-4"><a href="game4">
+    <div class="flex relative">
+      <img alt="gallery" class="rounded-lg absolute inset-0 w-full h-full object-cover object-center" src="https://kizicdn.com/system/static/thumbs/big_tile_thumb/1560/thumb300_w7_300_300.jpg?1556202470">
+      <div class="rounded-lg px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+        <h2 class="tracking-widest text-lg title-font font-large text-indigo-500 mb-1">Game 4</h2><br>
+        <h1 class="title-font text-xl font-medium text-gray-900 mb-3">Detective</h1><br><br>
+      </div>
+    </div></a>
+  </div>
+  <div class="lg:w-1/3 sm:w-1/2 p-4"><a href="game5">
+    <div class="flex relative">
+      <img alt="gallery" class="rounded-lg absolute inset-0 w-full h-full object-cover object-center" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlogCr2XxhcTdEToJOSFO0yHhdBIp4J6kxcw&usqp=CAU">
+      <div class="rounded-lg px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+        <h2 class="tracking-widest text-lg title-font font-large text-indigo-500 mb-1">Game 5</h2><br>
+        <h1 class="title-font text-xl font-medium text-gray-900 mb-3">Hunter Assasin</h1><br><br>
+      </div>
+    </div></a>
+  </div>
+  <div class="lg:w-1/3 sm:w-1/2 p-4"><a href="game6">
+    <div class="flex relative">
+      <img alt="gallery" class="rounded-lg absolute inset-0 w-full h-full object-cover object-left" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaoIAaEhpu5E-Xo8dyYZ04h31OTpM0ChVbGw&usqp=CAU">
+      <div class="rounded-lg px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+        <h2 class="tracking-widest text-lg title-font font-large text-indigo-500 mb-1">Game 6</h2><br>
+        <h1 class="title-font text-xl font-medium text-gray-900 mb-3">Draw A Bridge</h1><br><br>
+      </div>
+    </div></a>
+  </div>
+  <div class="lg:w-1/3 sm:w-1/2 p-4"><a href="game7">
+    <div class="flex relative">
+      <img alt="gallery" class="rounded-lg absolute inset-0 w-full h-full object-cover object-top" src="https://tcf.admeen.org/game/17500/17025/400x246/pac-xon-deluxe.jpg">
+      <div class="rounded-lg px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+        <h2 class="tracking-widest text-lg title-font font-large text-indigo-500 mb-1">Game 7</h2><br>
+        <h1 class="title-font text-xl font-medium text-gray-900 mb-3">Pac-Xon Delux</h1><br><br>
+      </div>
+    </div></a>
+  </div>
+  <div class="lg:w-1/3 sm:w-1/2 p-4"><a href="game8">
+    <div class="flex relative">
+      <img alt="gallery" class="rounded-lg absolute inset-0 w-full h-full object-cover object-top" src="https://i.ytimg.com/vi/RCNX_mabzrA/maxresdefault.jpg">
+      <div class="rounded-lg px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+        <h2 class="tracking-widest text-lg title-font font-large text-indigo-500 mb-1">Game 8</h2><br>
+        <h1 class="title-font text-xl font-medium text-gray-900 mb-3">Paper IO 3D</h1><br><br>
+      </div>
+    </div></a>
+  </div>
+  <div class="lg:w-1/3 sm:w-1/2 p-4"><a href="game9">
+    <div class="flex relative">
+      <img alt="gallery" class="rounded-lg absolute inset-0 w-full h-full object-cover object-center" src="https://play-lh.googleusercontent.com/EiElcSrd6-o-19roiswSx0AZPzsq6qF3hUGHsSWDl5UVtj7G23DHkneM8ucwqyOmEg">
+      <div class="rounded-lg px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+        <h2 class="tracking-widest text-lg title-font font-large text-indigo-500 mb-1">Game 9</h2><br>
+        <h1 class="title-font text-xl font-medium text-gray-900 mb-3">Brawl Stars</h1><br><br>
+      </div>
+    </div></a>
+  </div>
+  </div></section>
+  </div>
+  </section>
+{%  endblock  %}
