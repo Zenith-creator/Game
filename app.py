@@ -2,14 +2,43 @@ from flask import Flask,render_template,request
 from firebase import Firebase
 app=Flask(__name__)
 
+config = {
+  "apiKey": "AIzaSyBEoHS6dOwHTRy6PBA0najGugRMpH_ZiAE",
+  "authDomain": "zenith-gaming.firebaseapp.com",
+  "databaseURL": "https://zenith-gaming-default-rtdb.asia-southeast1.firebasedatabase.app",
+  "projectId": "zenith-gaming",
+  "storageBucket": "zenith-gaming.appspot.com",
+  "messagingSenderId": "855492909151",
+  "appId": "1:855492909151:web:9137cd1fc2e71a596723ea",
+  "measurementId": "G-1WMSXRBSC9"
+}
+
+firebase = Firebase(config)
+
+db = firebase.database()
+
+
 @app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/contact',methods=["GET","POST"])
 @app.route('/contact1',methods=["GET","POST"])
 def contact():
-    if request.method=="POST":
+    if request.method == 'POST':
+
+        name = request.form.get("name")
+        email = request.form.get("email")
+        subject = request.form.get("subject")
+        message = request.form.get("message")
+
+        data = {
+            "name":name,
+            "email":email,
+            "subject":subject,
+            "message":message
+
+        }
+        db.child("All Submissions").push(data)
         return render_template('contact1.html')
     return render_template('contact.html')
 
